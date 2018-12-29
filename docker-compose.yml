@@ -3,10 +3,7 @@ services:
   api:
     build: ./io-passthrough-api
     ports:
-    - "5000:5000"
     - "3010:3010"
-    volumes:
-    - ./io-passthrough-api/src
     links:
     - db
     - blockchain
