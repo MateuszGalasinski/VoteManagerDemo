@@ -6,15 +6,15 @@ services:
     - "3010:3010"
     links:
     - db
-    - blockchain
+    # - blockchain
     env_file:
-    - api.env
+    - io-passthrough-api/api.env
   db:
     build: ./mysqlDb
     expose:
     - "3306"
     - "33060"
-  blockchain:
-    build: ./VoteManagerContract
-    expose:
-    - "8545"
+  # blockchain:
+  #   build: ./VoteManagerContract
+  #   expose:
+  #   - "8545"
