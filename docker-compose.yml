@@ -11,10 +11,15 @@ services:
     - io-passthrough-api/api.env
   db:
     build: ./mysqlDb
+    ports:
+    - "3306:3306"
+    - "33060:33060"
     expose:
     - "3306"
     - "33060"
   blockchain:
     build: ./VoteManagerContract
+    ports:
+    - "8545:8545"
     expose:
     - "8545"
